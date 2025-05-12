@@ -43,7 +43,7 @@ private _formattedMessage = format ["%1: %2", _coloredName, _message];
 private _pos = getPos _npc;
 
 private _targets = allPlayers select {
-    (_x distanceSqr _pos) < (_radius * _radius) &&
+    _x distanceSqr _pos < _radius * _radius &&
     { _isGlobal || { side _x == _side } }
 };
 
